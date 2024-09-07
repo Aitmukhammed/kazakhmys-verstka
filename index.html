@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kazakhmys</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/sidebar.css">
+    <link rel="stylesheet" href="./css/calendar.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-container">
+                <div class="block-sidebar-btn">
+                    <button id="sidebar-btn" class="sidebar-btn">
+                        <div class="line-sideber-1"></div>
+                        <div class="line-sideber-2"></div>
+                        <div class="line-sideber-3"></div>
+                    </button>
+                    <nav class="logo-nav">
+                        <a href="#!">
+                            <img src="./img/logo.svg" alt="logo">
+                        </a>
+                    </nav>
+                </div>
+                <div class="header-nav">
+                    <nav class="nav">
+                        <ul class="nav-list">
+                            <li class="nav-item"><img src="./img/icons/bell.svg" alt="bell"></li>
+                            <li class="nav-item"><img src="./img/icons/settings.svg" alt="settings"></li>
+                            <li class="nav-item name-user">Сабыржанов А.Д</li>
+                            <li class="nav-item"><img src="./img/icons/profile-img.png" alt="profile"></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="parent-container">
+        <div id="sidebar" class="sidebar">
+            <div class="container-sidebar">
+                <ul class="sidebar-list">
+                    <li id="first-item" class="sidebar-item bc-blue">
+                        <img src="./img/icons/sidebar-1.svg" alt="sidebar-1">
+                        <div class="sidebar-text-wrapper"> 
+                            <div class="sidebar-text">Учет судебных споров
+                                <span><img id="right-row" class="right-row" src="./img/icons/right-row.svg" alt="right-row"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <div id="submenu" class="submenu">
+                        <ul class="submenu-lists">
+                            <li class="submenu-item">Подразделения</li>
+                            <li class="submenu-item">Отчеты</li>
+                            <li class="submenu-item">Реестр исков</li>
+                        </ul>
+                    </div>
+
+                    <div class="hidden">
+                        <li id="second-item" class="sidebar-item">
+                            <img src="./img/icons/sidebar-2.svg" alt="sidebar-2">
+                            <div class="sidebar-text-wrapper"> 
+                                <div class="sidebar-text">II Модуль
+                                    <span><img id="right-row-2" class="right-row" src="./img/icons/right-row.svg" alt="right-row-2"></span>
+                                </div>
+                            </div>
+                        </li>
+                        <div id="submenu-2" class="submenu">
+                            <ul class="submenu-lists">
+                                <li class="submenu-item">Html</li>
+                                <li class="submenu-item">Css</li>
+                                <li class="submenu-item">Javascript</li>
+                            </ul>
+                        </div>
+        
+                        <li id="third-item" class="sidebar-item">
+                            <img src="./img/icons/sidebar-3.svg" alt="sidebar-3">
+                            <div class="sidebar-text-wrapper"> 
+                                <div class="sidebar-text">III Модуль
+                                    <span><img id="right-row-3" class="right-row" src="./img/icons/right-row.svg" alt="right-row-3"></span>
+                                </div>
+                            </div>
+                        </li>
+                        <div id="submenu-3" class="submenu">
+                            <ul class="submenu-lists">
+                                <li class="submenu-item">Java</li>
+                                <li class="submenu-item">Python</li>
+                                <li class="submenu-item">C sharp</li>
+                            </ul>
+                        </div>
+        
+                        <li id="fourth-item" class="sidebar-item">
+                            <img src="./img/icons/sidebar-4.svg" alt="sidebar-4">
+                            <div class="sidebar-text-wrapper"> 
+                                <div class="sidebar-text">IV Модуль
+                                    <span><img id="right-row-4" class="right-row" src="./img/icons/right-row.svg" alt="right-row-4"></span>
+                                </div>
+                            </div>
+                        </li>
+                        <div id="submenu-4" class="submenu">
+                            <ul class="submenu-lists">
+                                <li class="submenu-item">Java</li>
+                                <li class="submenu-item">Python</li>
+                                <li class="submenu-item">C sharp</li>
+                            </ul>
+                        </div>
+                    </div>
+                </ul>
+
+                <div id="widgets" class="widgets">
+                    <div class="block-widgets">
+                        <button id="btn-widgets" class="btn-widgets">
+                            <img src="./img/icons/Domain.svg" alt="sidebar-4">
+                            <div class="sidebar-text-wrapper"> 
+                                <div class="sidebar-text"> 
+                                    <span class="text-widget">Виджеты</span>
+                                </div>
+                            </div>
+                            <img id="top-row" class="top-row" src="./img/icons/right-row.svg" alt="top-row-4">
+                        </button>
+
+                        <div class="hidden-widget">
+                            <div class="calendar-container">
+                                <header class="header-calendar">
+                                    <div class="icons">
+                                        <span id="prev" class="material-symbols-rounded">
+                                            <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.82843 9.50008L10.1213 16.793L8.70711 18.2072L0 9.50008L8.70711 0.792969L10.1213 2.20718L2.82843 9.50008Z" fill="white"/>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <p class="current-date"></p>
+                                    <div class="icons">
+                                        <span id="next" class="material-symbols-rounded">
+                                            <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.17156 9.50008L0.878662 2.20718L2.29288 0.792969L11 9.50008L2.29288 18.2072L0.878662 16.793L8.17156 9.50008Z" fill="white"/>
+                                            </svg>                                    
+                                        </span>
+                                    </div>
+                                </header>
+                                <div class="calendar">
+                                    <ul class="weeks">
+                                        <li>ВС</li>
+                                        <li>ПН</li>
+                                        <li>ВТ</li>
+                                        <li>СР</li>
+                                        <li>ЧТ</li>
+                                        <li>ПТ</li>
+                                        <li>СБ</li>
+                                    </ul>
+                                    <ul class="days"></ul>
+                                </div>
+                            </div>
+                            
+                            <div class="my-isks">
+                                <div class="my-isks-container">
+                                    <header class="header-isks">
+                                        <h3>Мои иски</h3>
+                                        <button>
+                                            <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0 0H1.80161V2.37643C2.87357 1.50741 4.22531 0.989107 5.69438 0.989107C9.17688 0.989107 12 3.90169 12 7.49455C12 11.0874 9.17688 14 5.69438 14C3.75721 14 2.02407 13.0988 0.867375 11.6806L2.32607 10.5795C3.15111 11.5376 4.35441 12.1413 5.69438 12.1413C8.18188 12.1413 10.1984 10.0609 10.1984 7.49455C10.1984 4.92823 8.18188 2.84781 5.69438 2.84781C4.71535 2.84781 3.80927 3.17007 3.07038 3.7174L5.40482 3.7174V5.5761H0V0Z" fill="white"/>
+                                            </svg>                                        
+                                    </header>
+                                    <div class="hr-row"></div>
+                                    <div class="status">
+                                        <div class="status-block">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7 14C7.91925 14 8.8295 13.8189 9.67878 13.4672C10.5281 13.1154 11.2997 12.5998 11.9497 11.9497C12.5998 11.2997 13.1154 10.5281 13.4672 9.67878C13.8189 8.8295 14 7.91925 14 7C14 6.08075 13.8189 5.1705 13.4672 4.32122C13.1154 3.47194 12.5998 2.70026 11.9497 2.05025C11.2997 1.40024 10.5281 0.884626 9.67878 0.532843C8.8295 0.18106 7.91925 -1.36979e-08 7 0C5.14348 2.76642e-08 3.36301 0.737498 2.05025 2.05025C0.737498 3.36301 0 5.14348 0 7C0 8.85652 0.737498 10.637 2.05025 11.9497C3.36301 13.2625 5.14348 14 7 14ZM6.81956 9.83111L10.7084 5.16444L9.51378 4.16889L6.16933 8.18144L4.43878 6.45011L3.339 7.54989L5.67233 9.88322L6.27433 10.4852L6.81956 9.83111Z" fill="#13B56A"/>
+                                            </svg>
+                                            <p>Исполнено</p>
+                                            <p class="number-status">14</p>                                        
+                                        </div>
+                                        <div class="status-block">
+                                            <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 3.3C7.42135 3.3 6.86639 3.53178 6.45722 3.94436C6.04805 4.35695 5.81818 4.91652 5.81818 5.5C5.81818 6.08348 6.04805 6.64306 6.45722 7.05564C6.86639 7.46822 7.42135 7.7 8 7.7C8.57865 7.7 9.13361 7.46822 9.54278 7.05564C9.95195 6.64306 10.1818 6.08348 10.1818 5.5C10.1818 4.91652 9.95195 4.35695 9.54278 3.94436C9.13361 3.53178 8.57865 3.3 8 3.3ZM8 9.16667C7.03558 9.16667 6.11065 8.78036 5.4287 8.09272C4.74675 7.40509 4.36364 6.47246 4.36364 5.5C4.36364 4.52754 4.74675 3.59491 5.4287 2.90728C6.11065 2.21964 7.03558 1.83333 8 1.83333C8.96442 1.83333 9.88935 2.21964 10.5713 2.90728C11.2532 3.59491 11.6364 4.52754 11.6364 5.5C11.6364 6.47246 11.2532 7.40509 10.5713 8.09272C9.88935 8.78036 8.96442 9.16667 8 9.16667ZM8 0C4.36364 0 1.25818 2.28067 0 5.5C1.25818 8.71933 4.36364 11 8 11C11.6364 11 14.7418 8.71933 16 5.5C14.7418 2.28067 11.6364 0 8 0Z" fill="#3491FF"/>
+                                            </svg>                                        
+                                            <p>Рассмотрено</p>
+                                            <p class="number-status">14</p>                                        
+                                        </div>
+                                        <div class="status-block">
+                                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9 13.6667L12.1111 10.5556L11.0222 9.46667L9.77778 10.7111V7.44444H8.22222V10.7111L6.97778 9.46667L5.88889 10.5556L9 13.6667ZM2 16V4.17778L3.78889 2H14.2111L16 4.17778V16H2ZM3.86667 4.33333H14.1333L13.4722 3.55556H4.52778L3.86667 4.33333Z" fill="white"/>
+                                            </svg>    
+                                            <p>Архивировано</p>
+                                            <p class="number-status">14</p>                                        
+                                        </div>
+                                        <div class="status-block">
+                                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6.99839 13.2237C5.78998 13.2237 4.70113 12.7326 3.89984 11.9507H6.99839L5.08885 10.0412H0V15.13L1.90953 17.0428V13.5404C3.18578 14.9039 4.98546 15.7698 6.99839 15.7698C10.6494 15.7698 13.6446 12.975 13.9645 9.40792H11.3861C11.0759 11.563 9.24071 13.2237 6.99839 13.2237ZM12.0905 0.5V4.00242C10.8142 2.63893 9.01454 1.77302 7.00162 1.77302C3.34733 1.77302 0.355412 4.56785 0.0323102 8.13489H2.61066C2.92084 5.97981 4.75929 4.31583 7.00162 4.31583C8.21002 4.31583 9.29887 4.80695 10.1002 5.58885H7.00162L8.91115 7.49838H14V2.40953L12.0905 0.5Z" fill="#FF7900"/>
+                                            </svg>                                        
+                                            <p>В процессе</p>
+                                            <p class="number-status">14</p>                                        
+                                        </div>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-container">
+            <header class="path">
+                <h3>Подразделения</h3>
+                <span>
+                    <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 5.16667C10 6.08714 10.7462 6.83333 11.6667 6.83333C12.5871 6.83333 13.3333 6.08714 13.3333 5.16667C13.3333 4.24619 12.5871 3.5 11.6667 3.5C10.7462 3.5 10 4.24619 10 5.16667ZM11.6667 12.6666C10.7462 12.6666 10 11.9204 10 10.9999C10 10.0795 10.7462 9.33328 11.6667 9.33328C12.5871 9.33328 13.3333 10.0795 13.3333 10.9999C13.3333 11.9204 12.5871 12.6666 11.6667 12.6666ZM11.6667 18.5C10.7462 18.5 10 17.7538 10 16.8333C10 15.9129 10.7462 15.1667 11.6667 15.1667C12.5871 15.1667 13.3333 15.9129 13.3333 16.8333C13.3333 17.7538 12.5871 18.5 11.6667 18.5Z" fill="#878E99"/>
+                    </svg>                        
+                </span>
+                <p>Учет судебных споров</p>
+                <span>
+                    <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9492 9.99992L7.33325 4.38395L8.42228 3.29492L15.1273 9.99992L8.42228 16.7049L7.33325 15.6159L12.9492 9.99992Z" fill="#3491FF"/>
+                    </svg>                        
+                </span>
+                <p class="third-path">Подразделения</p>
+            </header>
+
+            <div class="info-container">
+                <button class="add-isk">
+                    Добавить иск
+                </button>
+                <p>Все подразделения</p>
+                <div class="row-container">
+                    <div class="filter-block">
+                        <button class="filter-btn">
+                            <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.98404 0.992676C6.98404 0.440391 7.43175 -0.00732422 7.98404 -0.00732422C8.34143 -0.00732422 8.65503 0.180161 8.83186 0.462143L11.5195 3.14976C11.91 3.54029 11.91 4.17345 11.5195 4.56398C11.129 4.9545 10.4958 4.9545 10.1053 4.56398L8.98404 3.44275V10.9927C8.98404 11.545 8.53632 11.9927 7.98404 11.9927C7.43175 11.9927 6.98404 11.545 6.98404 10.9927V1.04213C6.98391 1.033 6.98391 1.02388 6.98404 1.01476V0.992676Z" fill="#081A3E"/>
+                                <path d="M5.01583 15.0076C5.01583 15.5599 4.56812 16.0076 4.01583 16.0076C3.65844 16.0076 3.34484 15.8201 3.16801 15.5381L0.480393 12.8505C0.089869 12.46 0.089869 11.8268 0.480393 11.4363C0.870917 11.0457 1.50408 11.0457 1.89461 11.4363L3.01583 12.5575V5.00757C3.01583 4.45528 3.46355 4.00757 4.01583 4.00757C4.56812 4.00757 5.01583 4.45528 5.01583 5.00757V14.9581C5.01596 14.9672 5.01596 14.9764 5.01583 14.9855V15.0076Z" fill="#081A3E"/>
+                            </svg>                                
+                        </button>
+                        <div class="input-wrapper">
+                            <svg  class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.49512 14.9902C4.90796 14.9902 2 12.0823 2 8.49512C2 4.90796 4.90796 2 8.49512 2C12.0823 2 14.9902 4.90796 14.9902 8.49512C14.9902 9.99608 14.4811 11.3781 13.6261 12.478L18 16.8518L16.8518 18L12.4779 13.6262C11.3781 14.4811 9.99606 14.9902 8.49512 14.9902ZM13.3665 8.49512C13.3665 11.1855 11.1855 13.3665 8.49512 13.3665C5.80475 13.3665 3.62378 11.1855 3.62378 8.49512C3.62378 5.80475 5.80475 3.62378 8.49512 3.62378C11.1855 3.62378 13.3665 5.80475 13.3665 8.49512Z" fill="#878E99"/>
+                            </svg>                                
+                            <input type="text" placeholder="Поиск">
+                        </div>                        
+                    </div>
+
+                    <div>
+                        Завтра сделаешь это
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+   
+
+    <script src="./js/script.js"></script>
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/calendar.js"></script>
+</body>
+</html>
+ 

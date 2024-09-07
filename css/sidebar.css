@@ -1,0 +1,256 @@
+/* sidebar css file */
+
+.sidebar {
+    width: 70px;
+    height: 100vh;
+    background-color: #081A3E;
+    transition: width 0.3s ease;
+}
+
+.sidebar-open {
+    width: 405px;
+    transition: width 0.3s ease;
+}
+
+.container-sidebar {
+    /* overflow: auto; */
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    height: 91%;
+    justify-content: flex-start;
+    /* padding: 0 13px; */
+    position: relative;
+    padding-bottom: 40px;
+}
+
+
+.sidebar-list {
+    /* padding-top: 17px; */
+    padding: 17px 13px 0 13px;
+    /* height: 90%; */
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin: 10px 0;
+    padding-left: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sidebar-item img {
+    z-index: 1;
+}
+
+.bc-blue {
+    background-color: #3491FF;
+}
+
+.sidebar-text-wrapper {
+    overflow: hidden; 
+    width: calc(100% - 40px); 
+}
+
+.sidebar-text {
+    display: flex; /* Используем flexbox для выравнивания иконки */
+    justify-content: space-between; /* Раздвигаем текст и иконку по краям */
+    align-items: center; /* Выравниваем по вертикали */
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    white-space: nowrap;
+    color: #FFF;
+    z-index: 0;
+    padding-left: 10px;
+}
+
+.sidebar-text img {
+    padding-top: 6px;
+}
+
+.sidebar-text span {
+    width: 20px; 
+    display: flex;
+    align-items: center;
+}
+
+.right-row {
+    transform: rotate(0deg);
+    transition: all 0.3s ease-in;
+}
+
+.row-active {
+    transform: rotate(-90deg);
+    transition: all 0.3s ease-in;
+}
+
+.sidebar-open .sidebar-text {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* submenu */
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in;
+    margin-top: -8px;
+}
+
+.open-submenu {
+    max-height: 200px; 
+}
+
+.submenu-lists li::marker { color: #FFF; }
+
+.submenu-item {
+    height: 40px;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 60px; 
+    color: #FFF;
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.submenu-item:hover {
+    background-color: #3491FF;
+}
+
+.submenu-item::before {
+    content: '•'; 
+    position: absolute;
+    left: 5px; 
+    color: #fff;
+    font-size: 16px;
+    margin-right: 5px; 
+    padding-left: 40px;
+}
+
+/* Widget */
+
+.widgets {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.block-widgets {
+    position: absolute;
+    bottom: 0; 
+    width: 100%;
+    transition: bottom 0.3s ease-in;
+    border: 1px solid #F3F6F90D;
+    box-shadow: 0px -5px 10px -5px #F3F6F90D;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    color: #FFF;
+    padding: 0 8px;
+}
+
+.raise-widgets .block-widgets {
+    bottom: calc(100% - 755px); 
+}
+
+.btn-widgets {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    border: 1px solid #F3F6F90D;
+    border-radius: 50px;
+    margin-top: 18.5px;
+    box-shadow: 0px 0px 10px 2px #F3F6F90D;
+    align-items: center;
+}
+
+.btn-widgets .sidebar-text-wrapper {
+    padding-right: 5px;
+}
+
+.text-widget {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 10px;
+}
+
+.top-row {
+    transform: rotate(-90deg);
+}
+
+.top-row-active {
+    transform: rotate(90deg);
+}
+
+
+/* Мои иски */
+.my-isks {
+    margin-top: 18px;
+}
+.my-isks-container {
+    padding: 10px 15px;
+    background-color: #38445d;
+    border-radius: 5px;
+}
+.header-isks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-isks h3 {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.hr-row {
+    width: 100%;
+    border: 1px solid #FFF;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+}
+
+.status-block:first-child {
+    margin-top: 15px;
+}
+
+.status-block {
+    display: flex;
+    margin-top: 10px;
+}
+
+.status-block {
+    width: 100%;
+    height: 53px;
+    border: 1px solid #FFF;
+    border-radius: 5px;
+    align-items: center;
+    padding-left: 22px;
+}
+
+.status-block p {
+    padding-left: 14px;
+}
+
+.number-status {
+    margin-left: auto;
+    padding-right: 17px;    
+}
+
+.hidden-widget {
+    display: none;
+}
