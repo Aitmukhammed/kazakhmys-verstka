@@ -6,7 +6,8 @@
 }
 .header-calendar {
   display: flex;
-  column-gap: 41px;
+  justify-content: space-between;
+  padding-right: 5px;
 }
 header .icons{
   display: flex;

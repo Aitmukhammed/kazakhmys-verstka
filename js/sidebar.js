@@ -24,6 +24,17 @@ const btnWidgets = document.querySelector("#btn-widgets");
 const hidden = document.querySelector(".hidden");
 const hiddenWidget = document.querySelector(".hidden-widget");
 
+const lineSideBar_1 =  document.querySelector(".line-sideber-1");
+const lineSideBar_2 =  document.querySelector(".line-sideber-2");
+const lineSideBar_3 =  document.querySelector(".line-sideber-3");
+
+document.querySelectorAll('.sidebar-item').forEach(item => {
+    item.addEventListener('click', () => {
+        document.querySelectorAll('.sidebar-item').forEach(el => el.classList.remove('active'));
+        item.classList.add('active');
+    });
+});
+
 
 function updateSubmenuAndIcons(open) {
     if (!sidebar.classList.contains('sidebar-open') || open == true) {
@@ -36,12 +47,23 @@ function updateSubmenuAndIcons(open) {
     } 
 }
 
+function openSidebar() {
+    sidebar.classList.add('sidebar-open'); 
+    lineSideBar_1.classList.add('line-sideber-1-open');
+    lineSideBar_2.classList.add('line-sideber-2-open');
+    lineSideBar_3.classList.add('line-sideber-3-open');    
+}
+
 // При нажатии на кнопку - меню (X)
 sidebarBtn.onclick = () => {
     sidebar.classList.toggle('sidebar-open');
     widgets.classList.remove('raise-widgets');
     topRow.classList.remove('top-row-active');
     hidden.style.display = "block";
+
+    lineSideBar_1.classList.toggle('line-sideber-1-open');
+    lineSideBar_2.classList.toggle('line-sideber-2-open');
+    lineSideBar_3.classList.toggle('line-sideber-3-open');
 
     if(!sidebar.classList.contains('sidebar-open')) {
         hiddenWidget.style.display = "none";
@@ -52,25 +74,25 @@ sidebarBtn.onclick = () => {
 
 // При нажатии на списков
 firstItem.onclick = () => {
-    sidebar.classList.add('sidebar-open'); // Открываем боковую панель, если она закрыта
+    openSidebar();
     submenu.classList.toggle('open-submenu'); // Открываем его подменю
     rightRow.classList.toggle('row-active'); // Переворачиваем его стрелку вниз
 }
 
 secondItem.onclick = () => {
-    sidebar.classList.add('sidebar-open'); 
+    openSidebar();
     submenu_2.classList.toggle('open-submenu');
     rightRow_2.classList.toggle('row-active');
 }
 
 thirdItem.onclick = () => {
-    sidebar.classList.add('sidebar-open'); 
+    openSidebar();
     submenu_3.classList.toggle('open-submenu'); 
     rightRow_3.classList.toggle('row-active');
 }
 
 fourthItem.onclick = () => {
-    sidebar.classList.add('sidebar-open'); 
+    openSidebar();
     submenu_4.classList.toggle('open-submenu');
     rightRow_4.classList.toggle('row-active');
 }
@@ -85,6 +107,7 @@ btnWidgets.onclick = () => {
         sidebar.classList.add('sidebar-open');
         hiddenWidget.style.display = "block";
         updateSubmenuAndIcons(true);
+        openSidebar();
     } else {
         hiddenWidget.style.display = "none";
         hidden.style.display = "block";

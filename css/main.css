@@ -16,7 +16,6 @@ body {
 }
 
 .container {
-    /* max-width: 1440px; */
     margin: 0 auto;
 }
 
@@ -48,8 +47,23 @@ body {
     height: 2.70px;
     background-color: #081A3E;
     margin-bottom: 2px;
+    transition: transform 0.3s ease-in;
 }
 
+.line-sideber-1-open {
+    transform: translate(0, 5px) rotate(47deg);
+    transition: transform 0.3s ease-in;
+}
+
+.line-sideber-2-open {
+    visibility: hidden;
+    transition: visibility 0s ease-in;
+}
+
+.line-sideber-3-open {
+    transform: translate(0, -3px) rotate(-43deg);
+    transition: transform 0.3s ease-in;
+}
 
 .nav-list {
     display: flex;
@@ -72,6 +86,14 @@ body {
 }
 
 .main-container {
+    max-height: 90vh; 
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding: 10px;
+}
+
+.main-container {
     padding: 24px;
     width: 100%;
 }
@@ -80,6 +102,8 @@ body {
     display: flex;
     column-gap: 8px;
     align-items: center;
+    margin-top: 22px;
+    cursor: pointer;
 }
 
 .path svg {
@@ -167,13 +191,156 @@ body {
 
 .input-wrapper .icon {
     position: absolute;
-    left: 10px; /* Отступ иконки от левой стороны */
+    left: 10px; 
     width: 16px;
     height: 16px;
 }
 
 .input-wrapper input {
-    padding-left: 35px; /* Добавляем отступ для текста, чтобы он не накладывался на иконку */
-    height: 40px; /* Примерная высота инпута */
+    padding-left: 35px; 
+    height: 40px;
     box-sizing: border-box;
+}
+
+.cal-block {
+    display: flex;
+}
+
+.row-cal-block {
+    display: flex;
+    align-items: center;
+    padding: 5px 8px;
+    column-gap: 13px;
+    width: 238px;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px -2px rgba(34, 60, 80, 0.2);
+    margin-right: 12px;
+}
+
+.btn-update {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 4px 12px;
+    box-shadow: 0px 2px 5px -2px rgba(34, 60, 80, 0.2);
+    border-radius: 5px;    
+}
+
+/* table */
+.table-container {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #878E99;
+    line-height: 16.8px;
+    letter-spacing: 0.5px;
+}
+
+.name svg, .type svg {
+    float: right;
+}
+
+td {
+    font-weight: 400;
+    font-size: 14px;
+    color: #081A3E;
+}
+
+
+tbody tr:first-child {
+    box-shadow: 0px 2px 5px -2px rgba(34, 60, 80, 0.2);
+}
+
+tbody tr:first-child td:first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+tbody tr:first-child td:last-child {
+    border-radius: 0 5px 5px 0; 
+}
+
+
+tbody td:first-child {
+    font-weight: bold; 
+}
+
+
+tr:nth-child(even) {
+    background-color: #f7f7ff;
+}
+
+.view-button {
+    background-color: #e6f0ff;
+    color: #007bff;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.view-button:hover {
+    background-color: #d1e9ff;
+}
+
+.flip-pages {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.block-displayed-pages {
+    height: 38px;
+    max-width: 405px;
+    display: flex;
+    align-items: center;
+    padding: 5px 8px;
+    box-shadow: 0px 2px 5px -2px rgba(34, 60, 80, 0.2);
+    font-weight: 500;
+    font-size: 14px;
+    color: #081A3E;
+    column-gap: 10px;
+}
+
+.text-page {
+    font-weight: bold;
+}
+
+.block-displayed-pages-2 {
+    width: 270px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    column-gap: 33px;
+    box-shadow: 0px 2px 5px -2px rgba(34, 60, 80, 0.2);
+    padding: 5px 8px;
+    font-weight: 400;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.block-displayed-pages-2 span:nth-of-type(1) {
+    color: #3491FF;
 }
